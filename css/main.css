@@ -1,0 +1,419 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+
+html.js .loader {
+	background: none repeat scroll 0 0 #ffffff;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+html.js .loader_inner {
+	background-image: url("../img/preloader.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: "RobotoRegular", sans-serif;
+	overflow-x: hidden;
+}
+.hidden {
+	display: none;
+}
+
+.navPanel{
+	width: 214px;
+	min-height: 100vh;
+	height: 100%;
+	background-color: #2B2B2B;
+}
+.layerAddWrapper{
+	padding-top: 60px;
+}
+.layerAdd{
+	cursor: pointer;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	background-color: transparent;
+}
+.layerAdd:hover{
+	background-color: #222222;
+}
+.layerAdd .upLine{
+	width: 0%;
+	background-color: #dedede;
+	height: 2px;
+	display: block;
+	margin-bottom: 20px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	margin-right: 100%;
+	opacity: 0;
+	visibility: hidden;
+}
+.layerAdd .downLine{
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	background-color: #dedede;
+	height: 2px;
+	display: block;
+	margin-top: 20px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	margin-left: 30%;
+}
+.layerAdd:hover .downLine{
+	width: 40%;
+	margin-left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.layerAdd:hover .upLine{
+	width: 100%;
+	margin-right: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.layerAdd .text{
+	height: 35px;
+	width: 150px;
+	border-radius: 2px;
+	background-color: white;
+	border: 0;
+	margin-left: 10px;
+	font-family: "OpenSansRegularItalic";
+	padding-left: 10px;
+	font-size: 16px;
+	color: #000;
+}
+.layerAdd .text:focus{
+	outline: 0;
+}
+.layerAdd .send{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../img/icons.png) -70px 0px no-repeat;
+	cursor: pointer;
+	position: relative;
+	top: 6px;
+}
+.layerAdd .send:hover{
+	background: url(../img/icons.png) -98px 0px no-repeat;
+}
+.layerList{
+	padding-left: 0;
+	cursor: pointer;
+}
+.layerList .layerElement{
+	min-height: 55px;
+	background-color: #222222;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1000ms;
+	-o-transition: 1s;
+	transition: 1s;
+	height: auto;
+}
+.layerList li{
+	margin-bottom: 5px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	position: relative;
+	-webkit-animation: NAME-YOUR-ANIMATION .5s ease-out;
+	-moz-animation:    NAME-YOUR-ANIMATION .5s ease-out;
+	-o-animation:      NAME-YOUR-ANIMATION .5s ease-out;
+	animation:         NAME-YOUR-ANIMATION .5s ease-out;
+}
+@keyframes NAME-YOUR-ANIMATION {
+	0%   { left: -100%; }
+	100% { left: 0; }
+}
+.layerList .layerElement.active{
+	background-color: #FF3753;	
+}
+.layerList .layerElement:hover{
+	background-color: #FF3753;
+}
+.layerList .layerElement .layerName{
+	font-family: "OpenSansRegularItalic";
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.5px;
+    padding-left: 15px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+    max-width: 120px;
+    display: inline-block;
+    line-height: 17px;
+    padding-top: 18px;
+	padding-bottom: 18px;
+}
+.layerList .layerElement:hover .layerName{
+	letter-spacing: 2.5px;
+}
+.layerList .layerElement .layerChange{
+	float: right;
+    padding-right: 20px;
+    padding-top: 3px;
+}
+.layerList .layerElement .layerProperties{
+	display: inline-block;
+    width: 25px;
+    height: 30px;
+    background: url(../img/icons.png) -148px 3px no-repeat;
+    position: relative;
+    top: 7px;
+}
+.layerList .layerElement .layerProperties:hover{
+	background: url(../img/icons.png) -171px 3px no-repeat;
+}
+.layerList .layerElement .layerRemove{
+	display: inline-block;
+    width: 25px;
+    height: 30px;
+    background: url(../img/icons.png) 0 1px no-repeat;
+    position: relative;
+    top: 7px;
+}
+.layerList .layerElement .layerRemove:hover{
+	background: url(../img/icons.png) -20px 1px no-repeat;
+}
+.layerChangeForm{
+	background-color: #2B2F3E;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: none;
+}
+.layerChangeForm .visability p{
+	font-family: "OpenSansRegularItalic";
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.5px;
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: inline-block;
+}
+.layerChangeForm .visability{
+	border: 1px solid white;
+    margin-left: 15px;
+    margin-right: 15px;
+	text-align: center;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+}
+.layerChangeForm .visability:hover{
+	border: 1px solid #FF3753;
+}
+.layerChangeForm .visability input{
+	position: relative;
+	top: 2px;
+}
+.layerChangeForm .rename{
+	border: 1px solid white;
+    margin-left: 15px;
+    margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	text-align: center;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+}
+.layerChangeForm .addShadow{
+	border: 1px solid white;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	text-align: center;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	z-index: 5;
+	position: relative;
+	background-color: #2B2F3E;
+}
+.layerChangeForm .commentLayout{
+	border: 1px solid white;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	text-align: center;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	z-index: 5;
+	position: relative;
+	background-color: #2B2F3E;
+}
+.layerChangeForm .commentLayout input{
+	margin-top: 10px;
+	font-family: "OpenSansRegularItalic";
+	font-size: 14px;
+	color: black;
+	text-align: left;
+	padding-left: 10px;
+	height: 20px;
+	width: 135px;
+	padding-bottom: 2px;
+	margin-bottom: 5px;
+}
+.layerChangeForm .commentLayout a{
+	font-family: "OpenSansRegularItalic";
+	font-size: 14px;
+	display: block;
+	height: 25px;
+	width: 100px;
+	margin: 0 auto;
+	color: white;
+	border: 1px solid transparent;
+	background-color: #FF3753;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: 500ms;
+	-o-transition: .5s;
+	transition: .5s;
+	padding-top: 2px;
+	margin-top: 5px;
+}
+.layerChangeForm .commentLayout a:hover{
+	background-color: transparent;
+	border: 1px solid #FF3753;
+}
+.layerChangeForm .addShadow .arrowDrop{
+	background: url("../img/arrowDrop.png") no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	margin-left: 10px;
+	position: relative;
+}
+.layerChangeForm .addShadow:hover{
+	border: 1px solid #FF3753;
+}
+.layerChangeForm .addShadow p{
+	margin-bottom: 0;
+	font-family: "OpenSansRegularItalic";
+	font-size: 14px;
+	color: white;
+	letter-spacing: 1.5px;
+	line-height: 17px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+.layerChangeForm .rename p{
+	margin-bottom: 0;
+	font-family: "OpenSansRegularItalic";
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+.layerChangeForm .rename input{
+	margin-bottom: 20px;
+	font-family: "OpenSansRegularItalic";
+    font-size: 14px;
+    color: black;
+	text-align: center;
+}
+.layerChangeForm .rename:hover{
+	border: 1px solid #FF3753;
+}
+.dropChoose{
+	border: 1px solid white;
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+	transition: .5s;
+	position: relative;
+	width: 182px;
+	left: 0;
+	background-color: #222222;
+	bottom: 48px;
+	z-index: 1;
+}
+.dropChoose .blackColor{
+	font-family: "OpenSansRegularItalic";
+	font-size: 14px;
+	color: white;
+	letter-spacing: 1.5px;
+	line-height: 17px;
+	margin-bottom: 15px;
+	display: inline-block;
+	margin-top: 14px;
+	position: relative;
+}
+.dropChoose.active{
+	left: 183px;
+}
